@@ -117,7 +117,7 @@ importers:
         specifier: ^7.3.4
         version: 7.3.4(@lottiefiles/dotlottie-react@0.10.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-native@0.83.0(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       native-component-list:
-        specifier: '*'
+        specifier: workspace:*
         version: link:../native-component-list
       react:
         specifier: 19.2.0
@@ -162,7 +162,7 @@ importers:
         specifier: 0.7.1
         version: 0.7.1(@babel/core@7.26.0)(react-native@0.83.0(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react@19.2.0)
       test-suite:
-        specifier: '*'
+        specifier: workspace:*
         version: link:../test-suite
     devDependencies:
       '@babel/core':
@@ -866,7 +866,7 @@ importers:
         specifier: ^1.3.0
         version: 1.7.0
       test-suite:
-        specifier: '*'
+        specifier: workspace:*
         version: link:../test-suite
       three:
         specifier: ^0.137.4
@@ -1562,7 +1562,7 @@ importers:
         specifier: ^0.4.1
         version: 0.4.1(expo@packages+expo)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       find-process:
         specifier: ^1.4.7
@@ -1644,7 +1644,7 @@ importers:
         specifier: ^1.2.1
         version: 1.2.1
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/@expo/config-plugins:
@@ -1699,13 +1699,13 @@ importers:
         specifier: ~0.4.11
         version: 0.4.11
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/@expo/config-types:
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       json-schema-to-typescript:
         specifier: ^15.0.0
@@ -1724,7 +1724,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       ws:
         specifier: ^8.18.0
@@ -1743,7 +1743,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/@expo/env:
@@ -1771,7 +1771,7 @@ importers:
         specifier: ^1.0.0
         version: 1.0.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/@expo/fingerprint:
@@ -1811,7 +1811,7 @@ importers:
         version: 7.7.2
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       require-from-string:
         specifier: ^2.0.2
@@ -1860,7 +1860,7 @@ importers:
         specifier: ^7.0.0
         version: 7.7.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       sharp-cli:
         specifier: ^5.2.0
@@ -1882,7 +1882,7 @@ importers:
         specifier: ^2.2.0
         version: 2.2.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       memfs:
         specifier: ^3.2.0
@@ -1932,7 +1932,7 @@ importers:
         specifier: ~19.2.0
         version: 19.2.2
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       glob:
         specifier: ^13.0.0
@@ -2035,7 +2035,7 @@ importers:
         specifier: ^1.5.3
         version: 1.5.3
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       sass:
         specifier: ^1.60.0
@@ -2069,7 +2069,7 @@ importers:
         version: 3.6.2
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       react-dom:
         specifier: 19.2.0
@@ -2088,7 +2088,7 @@ importers:
         specifier: ^22.14.0
         version: 22.14.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/@expo/package-manager:
@@ -2119,7 +2119,7 @@ importers:
         specifier: ^6.1.0
         version: 6.1.1
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/@expo/pkcs12:
@@ -2129,7 +2129,7 @@ importers:
         version: 1.3.1
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/@expo/plist:
@@ -2144,8 +2144,11 @@ importers:
         specifier: ^15.1.1
         version: 15.1.1
     devDependencies:
+      '@types/base64-js':
+        specifier: ^1.2.5
+        version: 1.5.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/@expo/prebuild-config:
@@ -2191,7 +2194,7 @@ importers:
         specifier: ~0.4.11
         version: 0.4.11
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/@expo/router-server:
@@ -2234,7 +2237,7 @@ importers:
   packages/@expo/schema-utils:
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
       json-schema-to-typescript:
         specifier: ^15.0.0
@@ -2259,7 +2262,7 @@ importers:
         specifier: ^7.2.4
         version: 7.2.4
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../../expo-module-scripts
 
   packages/babel-preset-expo:
@@ -2347,7 +2350,7 @@ importers:
         specifier: ^7.20.5
         version: 7.20.5
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       jest:
         specifier: ^29.2.1
@@ -2359,13 +2362,13 @@ importers:
   packages/create-expo:
     devDependencies:
       '@expo/config':
-        specifier: ~12.0.9
+        specifier: workspace:*
         version: link:../@expo/config
       '@expo/json-file':
-        specifier: ^10.0.7
+        specifier: workspace:*
         version: link:../@expo/json-file
       '@expo/package-manager':
-        specifier: ^1.9.8
+        specifier: workspace:*
         version: link:../@expo/package-manager
       '@expo/spawn-async':
         specifier: ^1.7.2
@@ -2401,7 +2404,7 @@ importers:
         specifier: ^4.3.4
         version: 4.4.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       getenv:
         specifier: ^2.0.0
@@ -2431,7 +2434,7 @@ importers:
   packages/create-expo-module:
     devDependencies:
       '@expo/json-file':
-        specifier: ^10.0.7
+        specifier: workspace:*
         version: link:../@expo/json-file
       '@expo/rudder-sdk-node':
         specifier: ^1.1.1
@@ -2467,7 +2470,7 @@ importers:
         specifier: ^3.1.10
         version: 3.1.10
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       getenv:
         specifier: ^2.0.0
@@ -2498,7 +2501,7 @@ importers:
         specifier: ^22.0.3
         version: 22.0.3
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/eslint-config-expo:
@@ -2612,7 +2615,7 @@ importers:
         specifier: ^8.29.1
         version: 8.29.1(eslint@9.24.0(jiti@1.21.0))(typescript@5.9.2)
       eslint-config-universe:
-        specifier: ^15.0.3
+        specifier: workspace:*
         version: link:../eslint-config-universe
       eslint-plugin-eslint-plugin:
         specifier: ^6.2.0
@@ -2700,10 +2703,10 @@ importers:
         version: 8.0.0-3
     devDependencies:
       '@expo/dom-webview':
-        specifier: 0.2.7
+        specifier: workspace:*
         version: link:../@expo/dom-webview
       '@expo/metro-runtime':
-        specifier: ^6.1.2
+        specifier: workspace:*
         version: link:../@expo/metro-runtime
       '@types/node':
         specifier: ^22.14.0
@@ -2715,7 +2718,7 @@ importers:
         specifier: ~19.1.0
         version: 19.1.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       react:
         specifier: 19.2.0
@@ -2740,7 +2743,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-app-integrity:
@@ -2753,7 +2756,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-apple-authentication:
@@ -2766,7 +2769,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-application:
@@ -2776,7 +2779,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-asset:
@@ -2807,7 +2810,7 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-audio:
@@ -2826,7 +2829,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-auth-session:
@@ -2857,7 +2860,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-background-fetch:
@@ -2870,7 +2873,7 @@ importers:
         version: link:../expo-task-manager
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-background-task:
@@ -2883,7 +2886,7 @@ importers:
         version: link:../expo-task-manager
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-battery:
@@ -2896,7 +2899,7 @@ importers:
         version: 19.2.0
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-blob:
@@ -2906,7 +2909,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-blur:
@@ -2934,7 +2937,7 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0(jest@29.7.0(@types/node@22.14.0)(ts-node@10.9.2(@swc/core@1.11.11)(@types/node@22.14.0)(typescript@5.9.2)))(react-native@0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react-test-renderer@19.2.0(react@19.2.0))(react@19.2.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-brightness:
@@ -2947,7 +2950,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-build-properties:
@@ -2963,7 +2966,7 @@ importers:
         version: 7.7.2
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-calendar:
@@ -2976,7 +2979,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-camera:
@@ -2998,7 +3001,7 @@ importers:
         version: 0.21.0(encoding@0.1.13)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-cellular:
@@ -3008,7 +3011,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-checkbox:
@@ -3036,7 +3039,7 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0(jest@29.7.0(@types/node@22.14.0)(ts-node@10.9.2(@swc/core@1.11.11)(@types/node@22.14.0)(typescript@5.9.2)))(react-native@0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react-test-renderer@19.2.0(react@19.2.0))(react@19.2.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-clipboard:
@@ -3052,7 +3055,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-constants:
@@ -3071,7 +3074,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-contacts:
@@ -3087,7 +3090,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-crypto:
@@ -3097,7 +3100,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-dev-client:
@@ -3122,10 +3125,10 @@ importers:
         version: link:../expo-updates-interface
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       expo-test-runner:
-        specifier: 0.3.7
+        specifier: workspace:*
         version: link:../expo-test-runner
 
   packages/expo-dev-client-components:
@@ -3181,10 +3184,10 @@ importers:
         specifier: ^5.0.0
         version: 5.0.2
       babel-preset-expo:
-        specifier: ~54.0.1
+        specifier: workspace:*
         version: link:../babel-preset-expo
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       react:
         specifier: 19.2.0
@@ -3212,28 +3215,28 @@ importers:
         specifier: ^0.7.39
         version: 0.7.39
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-doctor:
     devDependencies:
       '@expo/cli':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../@expo/cli
       '@expo/config':
-        specifier: ~12.0.9
+        specifier: workspace:*
         version: link:../@expo/config
       '@expo/env':
-        specifier: ~2.0.7
+        specifier: workspace:*
         version: link:../@expo/env
       '@expo/json-file':
-        specifier: ~10.0.7
+        specifier: workspace:*
         version: link:../@expo/json-file
       '@expo/metro':
         specifier: ~54.2.0
         version: 54.2.0
       '@expo/schemer':
-        specifier: 2.1.0
+        specifier: workspace:*
         version: link:../@expo/schemer
       '@expo/spawn-async':
         specifier: ^1.7.2
@@ -3251,7 +3254,7 @@ importers:
         specifier: ^4.3.4
         version: 4.4.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       getenv:
         specifier: ^2.0.0
@@ -3285,13 +3288,13 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-eas-client:
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-env-info:
@@ -3304,7 +3307,7 @@ importers:
         specifier: ^7.8.1
         version: 7.8.3
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-file-system:
@@ -3317,10 +3320,10 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       jest-expo:
-        specifier: ~54.0.11
+        specifier: workspace:*
         version: link:../jest-expo
 
   packages/expo-font:
@@ -3345,7 +3348,7 @@ importers:
         specifier: ^2.1.3
         version: 2.1.3
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-gl:
@@ -3382,7 +3385,7 @@ importers:
         specifier: ^0.0.6
         version: 0.0.6
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       react-test-renderer:
         specifier: 19.2.0
@@ -3413,7 +3416,7 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0(jest@29.7.0(@types/node@22.14.0)(ts-node@10.9.2(@swc/core@1.11.11)(@types/node@22.14.0)(typescript@5.9.2)))(react-native@0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react-test-renderer@19.2.0(react@19.2.0))(react@19.2.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-haptics:
@@ -3423,7 +3426,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-image:
@@ -3442,7 +3445,7 @@ importers:
         version: 0.21.0(encoding@0.1.13)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-image-loader:
@@ -3461,7 +3464,7 @@ importers:
         version: link:../expo-image-loader
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-image-picker:
@@ -3477,7 +3480,7 @@ importers:
         specifier: ^14.6.1
         version: 14.6.1(@testing-library/dom@10.4.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-insights:
@@ -3490,7 +3493,7 @@ importers:
         version: link:../expo-eas-client
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-intent-launcher:
@@ -3500,7 +3503,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-json-utils: {}
@@ -3518,7 +3521,7 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0(jest@29.7.0(@types/node@22.14.0)(ts-node@10.9.2(@swc/core@1.11.11)(@types/node@22.14.0)(typescript@5.9.2)))(react-native@0.83.0(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react-test-renderer@19.2.0(react@19.2.0))(react@19.2.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-linear-gradient:
@@ -3546,7 +3549,7 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0(jest@29.7.0(@types/node@22.14.0)(ts-node@10.9.2(@swc/core@1.11.11)(@types/node@22.14.0)(typescript@5.9.2)))(react-native@0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react-test-renderer@19.2.0(react@19.2.0))(react@19.2.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-linking:
@@ -3565,7 +3568,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-live-photo:
@@ -3581,7 +3584,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-local-authentication:
@@ -3594,7 +3597,7 @@ importers:
         version: 2.2.4
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-localization:
@@ -3613,7 +3616,7 @@ importers:
         specifier: ^1.0.3
         version: 1.0.3
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-location:
@@ -3623,7 +3626,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-mail-composer:
@@ -3633,7 +3636,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-manifests:
@@ -3649,7 +3652,7 @@ importers:
         version: link:../expo-json-utils
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-maps:
@@ -3668,7 +3671,7 @@ importers:
         specifier: ~19.2.0
         version: 19.2.2
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-media-library:
@@ -3681,7 +3684,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-mesh-gradient:
@@ -3700,7 +3703,7 @@ importers:
         specifier: ~19.2.0
         version: 19.2.2
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-module-scripts:
@@ -3801,7 +3804,7 @@ importers:
         version: 5.0.0
     devDependencies:
       expo-module-scripts:
-        specifier: ~5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       memfs:
         specifier: ^3.2.0
@@ -3823,7 +3826,7 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0(jest@29.7.0(@types/node@22.14.0)(ts-node@10.9.2(@swc/core@1.11.11)(@types/node@22.14.0)(typescript@5.9.2)))(react-native@0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react-test-renderer@19.2.0(react@19.2.0))(react@19.2.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-modules-test-core:
@@ -3869,7 +3872,7 @@ importers:
         specifier: ^4.1.7
         version: 4.1.12
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-network:
@@ -3882,7 +3885,7 @@ importers:
         version: 19.2.0
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-network-addons:
@@ -3892,7 +3895,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-notifications:
@@ -3929,7 +3932,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       memfs:
         specifier: ^3.2.0
@@ -3945,7 +3948,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-processing:
@@ -4109,7 +4112,7 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0(jest@29.7.0(@types/node@22.14.0)(ts-node@10.9.2(@swc/core@1.11.11)(@types/node@22.14.0)(typescript@5.9.2)))(react-native@0.83.0(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react-test-renderer@19.2.0(react@19.2.0))(react@19.2.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-screen-orientation:
@@ -4122,7 +4125,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-secure-store:
@@ -4132,7 +4135,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-sensors:
@@ -4148,7 +4151,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-server:
@@ -4157,7 +4160,7 @@ importers:
         specifier: ^5.0.3
         version: 5.0.3
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       npm-run-all2:
         specifier: ^8.0.4
@@ -4173,7 +4176,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-sms:
@@ -4183,7 +4186,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-speech:
@@ -4193,7 +4196,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-splash-screen:
@@ -4206,7 +4209,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-sqlite:
@@ -4234,7 +4237,7 @@ importers:
         specifier: ^11.6.0
         version: 11.6.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       react-error-boundary:
         specifier: ^4.0.11
@@ -4243,10 +4246,10 @@ importers:
   packages/expo-standard-web-crypto:
     devDependencies:
       expo-crypto:
-        specifier: ^15.0.7
+        specifier: workspace:*
         version: link:../expo-crypto
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-status-bar:
@@ -4274,7 +4277,7 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0(jest@29.7.0(@types/node@22.14.0)(ts-node@10.9.2(@swc/core@1.11.11)(@types/node@22.14.0)(typescript@5.9.2)))(react-native@0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react-test-renderer@19.2.0(react@19.2.0))(react@19.2.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-store-review:
@@ -4287,7 +4290,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-structured-headers: {}
@@ -4311,10 +4314,10 @@ importers:
         version: 2.1.0
     devDependencies:
       expo-font:
-        specifier: ^14.0.7
+        specifier: workspace:*
         version: link:../expo-font
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-system-ui:
@@ -4336,7 +4339,7 @@ importers:
         version: 0.21.0(encoding@0.1.13)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-task-manager:
@@ -4352,7 +4355,7 @@ importers:
         version: link:../unimodules-app-loader
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-test-runner:
@@ -4392,10 +4395,10 @@ importers:
         specifier: ^2.5.12
         version: 2.6.9
       eslint-config-universe:
-        specifier: ^15.0.3
+        specifier: workspace:*
         version: link:../eslint-config-universe
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       typescript:
         specifier: ^5.9.2
@@ -4411,7 +4414,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-ui:
@@ -4433,7 +4436,7 @@ importers:
         specifier: ~19.2.0
         version: 19.2.2
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-updates:
@@ -4506,7 +4509,7 @@ importers:
         specifier: ^0.38.3
         version: 0.38.4
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       express:
         specifier: ^5.1.0
@@ -4543,7 +4546,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-video-thumbnails:
@@ -4553,7 +4556,7 @@ importers:
         version: link:../expo
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/expo-web-browser:
@@ -4566,7 +4569,7 @@ importers:
         version: 0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0)
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/html-elements:
@@ -4594,19 +4597,19 @@ importers:
         specifier: ^13.2.0
         version: 13.2.0(jest@29.7.0(@types/node@22.14.0)(ts-node@10.9.2(@swc/core@1.11.11)(@types/node@22.14.0)(typescript@5.9.2)))(react-native@0.82.1(@babel/core@7.26.0)(@types/react@19.2.2)(react@19.2.0))(react-test-renderer@19.2.0(react@19.2.0))(react@19.2.0)
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/install-expo-modules:
     devDependencies:
       '@expo/config':
-        specifier: ~12.0.9
+        specifier: workspace:*
         version: link:../@expo/config
       '@expo/config-plugins':
-        specifier: ~54.0.1
+        specifier: workspace:*
         version: link:../@expo/config-plugins
       '@expo/package-manager':
-        specifier: ^1.9.8
+        specifier: workspace:*
         version: link:../@expo/package-manager
       '@expo/spawn-async':
         specifier: ^1.7.2
@@ -4624,7 +4627,7 @@ importers:
         specifier: ^12.1.0
         version: 12.1.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       glob:
         specifier: ^13.0.0
@@ -4740,10 +4743,10 @@ importers:
         version: 5.0.0
     devDependencies:
       '@expo/cli':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../@expo/cli
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       memfs:
         specifier: ^3.2.0
@@ -4752,7 +4755,7 @@ importers:
   packages/pod-install:
     devDependencies:
       '@expo/package-manager':
-        specifier: ^1.9.8
+        specifier: workspace:*
         version: link:../@expo/package-manager
       chalk:
         specifier: ^4.0.0
@@ -4761,7 +4764,7 @@ importers:
         specifier: ^12.1.0
         version: 12.1.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       terminal-link:
         specifier: ^2.1.1
@@ -4773,16 +4776,16 @@ importers:
   packages/unimodules-app-loader:
     devDependencies:
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
 
   packages/uri-scheme:
     devDependencies:
       '@expo/config-plugins':
-        specifier: ~54.0.1
+        specifier: workspace:*
         version: link:../@expo/config-plugins
       '@expo/plist':
-        specifier: ^0.4.7
+        specifier: workspace:*
         version: link:../@expo/plist
       '@expo/spawn-async':
         specifier: ^1.7.2
@@ -4797,7 +4800,7 @@ importers:
         specifier: ^12.1.0
         version: 12.1.0
       expo-module-scripts:
-        specifier: ^5.0.7
+        specifier: workspace:*
         version: link:../expo-module-scripts
       glob:
         specifier: ^13.0.0
@@ -7587,6 +7590,10 @@ packages:
 
   '@types/babel__traverse@7.28.0':
     resolution: {integrity: sha512-8PvcXf70gTDZBgt9ptxJ8elBeBjcLOAcOtoO/mPJjtji1+CdGbHgm77om1GrsPxsiE+uXIpNSK64UYaIwQXd4Q==}
+
+  '@types/base64-js@1.5.0':
+    resolution: {integrity: sha512-xDDGwUoGXW4FHFWs1pIMXZrVD4kxOAo4KmNSZlb0w5hT52Gd4eIzkjwVp/XRpSox2hfR3h7ZO6witfU7aAZ6XA==}
+    deprecated: This is a stub types definition. base64-js provides its own type definitions, so you do not need this installed.
 
   '@types/better-sqlite3@7.6.6':
     resolution: {integrity: sha512-nuFAptzt0hZYBvyLzKQCbuCCK+RN9PHH4ezar5EJLIg2qpVhwQ/uLvLO/K8A9O7N8DafawgFupiyXQSs0U48Ng==}
@@ -18166,6 +18173,10 @@ snapshots:
     dependencies:
       '@babel/types': 7.28.2
 
+  '@types/base64-js@1.5.0':
+    dependencies:
+      base64-js: 1.5.1
+
   '@types/better-sqlite3@7.6.6':
     dependencies:
       '@types/node': 22.14.0
@@ -22959,7 +22970,7 @@ snapshots:
   metro-source-map@0.83.3:
     dependencies:
       '@babel/traverse': 7.28.0
-      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.28.0'
+      '@babel/traverse--for-generate-function-map': '@babel/traverse@7.28.5'
       '@babel/types': 7.28.2
       flow-enums-runtime: 0.0.6
       invariant: 2.2.4

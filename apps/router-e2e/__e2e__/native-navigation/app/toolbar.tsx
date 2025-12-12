@@ -223,7 +223,7 @@ export default function ToolbarScreen() {
           sf="magnifyingglass"
           tintColor={Color.ios.systemBlue}
           onPress={handleSearch}
-          sharesBackground={sharesBackgroundSearchButton}
+          separateBackground={!sharesBackgroundSearchButton}
           hidesSharedBackground={hidesSharedBackgroundSearchButton}
         />
 
@@ -271,7 +271,7 @@ export default function ToolbarScreen() {
         )}
 
         {/* Custom view with custom component */}
-        <Toolbar.View sharesBackground={false} style={{ width: 32, height: 32 }}>
+        <Toolbar.View separateBackground style={{ width: 32, height: 32 }}>
           <Pressable
             testID="custom-plus-button"
             onPress={() => Alert.alert('Custom Button', 'Plus button pressed!')}

@@ -25,6 +25,9 @@ export interface RouterToolbarItemProps {
         fontSize?: number;
         fontWeight?: string;
     };
+    accessibilityLabel?: string;
+    accessibilityHint?: string;
+    disabled?: boolean;
     onSelected?: () => void;
 }
 //# sourceMappingURL=native.types.d.ts.map

@@ -39,11 +39,12 @@ export interface StackHeaderSpacerProps {
  */
 export const StackHeaderSpacer: React.FC<StackHeaderSpacerProps> = () => null;
 
-export function convertStackHeaderSpacerPropsToRNHeaderItem(
-  props: StackHeaderSpacerProps
-): NativeStackHeaderItemSpacing {
+// TODO: implement missing props in react-native-screens
+export function convertStackHeaderSpacerPropsToRNHeaderItem({
+  width,
+}: StackHeaderSpacerProps): NativeStackHeaderItemSpacing {
   return {
     type: 'spacing',
-    spacing: props.width,
+    spacing: width,
   };
 }

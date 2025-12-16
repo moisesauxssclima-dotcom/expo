@@ -1,7 +1,6 @@
 'use client';
 
-import { nanoid } from 'nanoid/non-secure';
-import React, { isValidElement, use, useMemo, type PropsWithChildren } from 'react';
+import React, { isValidElement, use, useId, type PropsWithChildren } from 'react';
 import type { ViewStyle } from 'react-native';
 import type { SFSymbol } from 'sf-symbols-typescript';
 
@@ -15,10 +14,15 @@ import { LinkAppleZoom } from './zoom/link-apple-zoom';
 export interface LinkMenuActionProps {
   /**
    * The title of the menu item.
+   * @deprecated Use `children` prop instead.
    */
-  title: string;
+  title?: string;
   /**
-   * Optional SF Symbol displayed alongside the menu item.
+   * The title of the menu item.
+   */
+  children?: string;
+  /**
+   * SF Symbol displayed alongside the menu item.
    */
   icon?: SFSymbol;
   /**
@@ -46,6 +50,14 @@ export interface LinkMenuActionProps {
    * If `true`, the menu item will be displayed as selected.
    */
   isOn?: boolean;
+  /**
+   * Whether the menu element should be hidden.
+   *
+   * @see [Official Apple documentation](https://developer.apple.com/documentation/uikit/uimenuelement/attributes/hidden) for more information.
+   *
+   * @default false
+   */
+  hidden?: boolean;
   onPress: () => void;
 }
 
@@ -58,14 +70,15 @@ export interface LinkMenuActionProps {
  * @platform ios
  */
 export function LinkMenuAction(props: LinkMenuActionProps) {
-  const identifier = useMemo(() => nanoid(), []);
+  const identifier = useId();
   if (useIsPreview() || process.env.EXPO_OS !== 'ios' || !use(InternalLinkPreviewContext)) {
     return null;
   }
-  const { unstable_keepPresented, onPress, ...rest } = props;
+  const { unstable_keepPresented, onPress, children, title, ...rest } = props;
   return (
     <NativeLinkPreviewAction
       {...rest}
+      title={children ?? title ?? ''}
       onSelected={onPress}
       keepPresented={unstable_keepPresented}
       identifier={identifier}
@@ -81,7 +94,7 @@ export interface LinkMenuProps {
   /**
    * Optional SF Symbol displayed alongside the menu item.
    */
-  icon?: string;
+  icon?: SFSymbol;
   /**
    * If `true`, the menu will be displayed as a palette.
    * This means that the menu will be displayed as one row
@@ -132,7 +145,7 @@ export interface LinkMenuProps {
  * @platform ios
  */
 export const LinkMenu: React.FC<LinkMenuProps> = (props) => {
-  const identifier = useMemo(() => nanoid(), []);
+  const identifier = useId();
   if (useIsPreview() || process.env.EXPO_OS !== 'ios' || !use(InternalLinkPreviewContext)) {
     return null;
   }

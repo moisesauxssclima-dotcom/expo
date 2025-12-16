@@ -28,13 +28,16 @@ class LinkPreviewNativeActionView: ExpoView, LinkPreviewMenuUpdatable {
       }
     }
   }
-
-  // MARK: - Action only props
   var disabled: Bool? {
     didSet {
       updateUiAction()
+      if isMenuAction {
+        updateMenu()
+      }
     }
   }
+
+  // MARK: - Action only props
   var isOn: Bool? {
     didSet {
       updateUiAction()
@@ -62,6 +65,30 @@ class LinkPreviewNativeActionView: ExpoView, LinkPreviewMenuUpdatable {
     }
   }
   var displayInline: Bool = false {
+    didSet {
+      if isMenuAction {
+        updateMenu()
+      }
+    }
+  }
+
+  // MARK: - UIBarButtonItem props
+  var routerHidden: Bool = false {
+    didSet {
+      updateUiAction()
+      if isMenuAction {
+        updateMenu()
+      }
+    }
+  }
+  var sharesBackground: Bool? {
+    didSet {
+      if isMenuAction {
+        updateMenu()
+      }
+    }
+  }
+  var hidesSharedBackground: Bool? {
     didSet {
       if isMenuAction {
         updateMenu()
@@ -133,6 +160,9 @@ class LinkPreviewNativeActionView: ExpoView, LinkPreviewMenuUpdatable {
     var attributes: UIMenuElement.Attributes = []
     if destructive == true { attributes.insert(.destructive) }
     if disabled == true { attributes.insert(.disabled) }
+    if routerHidden {
+      attributes.insert(.hidden)
+    }
 
     if #available(iOS 16.0, *) {
       if keepPresented == true { attributes.insert(.keepsMenuPresented) }

@@ -36,5 +36,5 @@ export interface StackHeaderSpacerProps {
  * @platform ios
  */
 export declare const StackHeaderSpacer: React.FC<StackHeaderSpacerProps>;
-export declare function convertStackHeaderSpacerPropsToRNHeaderItem(props: StackHeaderSpacerProps): NativeStackHeaderItemSpacing;
+export declare function convertStackHeaderSpacerPropsToRNHeaderItem({ width, }: StackHeaderSpacerProps): NativeStackHeaderItemSpacing;
 //# sourceMappingURL=StackHeaderSpacer.d.ts.map

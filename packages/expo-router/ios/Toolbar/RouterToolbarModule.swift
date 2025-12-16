@@ -57,6 +57,15 @@ public class RouterToolbarModule: Module {
         (view: RouterToolbarItemView, config: BadgeConfigurationRecord?) in
         view.badgeConfiguration = config?.toBadgeConfiguration()
       }
+      Prop("accessibilityLabel") { (view: RouterToolbarItemView, accessibilityLabel: String?) in
+        view.accessibilityLabel = accessibilityLabel
+      }
+      Prop("accessibilityHint") { (view: RouterToolbarItemView, accessibilityHint: String?) in
+        view.accessibilityHint = accessibilityHint
+      }
+      Prop("disabled") { (view: RouterToolbarItemView, disabled: Bool?) in
+        view.disabled = disabled ?? false
+      }
 
       Events("onSelected")
     }

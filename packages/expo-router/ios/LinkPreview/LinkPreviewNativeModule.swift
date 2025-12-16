@@ -64,11 +64,11 @@ public class LinkPreviewNativeModule: Module {
       Prop("destructive") { (view: LinkPreviewNativeActionView, destructive: Bool?) in
         view.destructive = destructive
       }
-      Prop("singleSelection") { (view: LinkPreviewNativeActionView, singleSelection: Bool) in
-        view.singleSelection = singleSelection
+      Prop("singleSelection") { (view: LinkPreviewNativeActionView, singleSelection: Bool?) in
+        view.singleSelection = singleSelection ?? false
       }
-      Prop("displayAsPalette") { (view: LinkPreviewNativeActionView, displayAsPalette: Bool) in
-        view.displayAsPalette = displayAsPalette
+      Prop("displayAsPalette") { (view: LinkPreviewNativeActionView, displayAsPalette: Bool?) in
+        view.displayAsPalette = displayAsPalette ?? false
       }
       Prop("isOn") { (view: LinkPreviewNativeActionView, isOn: Bool?) in
         view.isOn = isOn
@@ -76,8 +76,17 @@ public class LinkPreviewNativeModule: Module {
       Prop("keepPresented") { (view: LinkPreviewNativeActionView, keepPresented: Bool?) in
         view.keepPresented = keepPresented
       }
-      Prop("displayInline") { (view: LinkPreviewNativeActionView, displayInline: Bool) in
-        view.displayInline = displayInline
+      Prop("displayInline") { (view: LinkPreviewNativeActionView, displayInline: Bool?) in
+        view.displayInline = displayInline ?? false
+      }
+      Prop("hidden") { (view: LinkPreviewNativeActionView, hidden: Bool?) in
+        view.routerHidden = hidden ?? false
+      }
+      Prop("sharesBackground") { (view: LinkPreviewNativeActionView, sharesBackground: Bool?) in
+        view.sharesBackground = sharesBackground
+      }
+      Prop("hidesSharedBackground") { (view: LinkPreviewNativeActionView, hidesSharedBackground: Bool?) in
+        view.hidesSharedBackground = hidesSharedBackground
       }
 
       Events("onSelected")

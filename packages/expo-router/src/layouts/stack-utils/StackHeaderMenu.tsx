@@ -15,7 +15,7 @@ import {
 import { Menu, MenuAction } from '../../primitives';
 import { isChildOfType } from '../../utils/children';
 
-export interface StackHeaderMenuProps extends StackHeaderItemSharedProps {
+export interface StackHeaderMenuProps {
   /**
    * Optional title to show on top of the menu.
    */
@@ -40,6 +40,59 @@ export interface StackHeaderMenuProps extends StackHeaderItemSharedProps {
    * @see [Apple documentation](https://developer.apple.com/documentation/uikit/uimenuelement/attributes/destructive) for more information.
    */
   destructive?: boolean;
+  /**
+   * There are two ways to specify the content of the header item:
+   *
+   * @example
+   * ```tsx
+   * import { Stack } from 'expo-router';
+   *
+   * ...
+   * <Stack.Header.Menu icon="star.fill" title="As props">
+   *  <Stack.Header.MenuAction>Action 1</Stack.Header.MenuAction>
+   * </Stack.Header.Menu>
+   * ```
+   *
+   * @example
+   * ```tsx
+   * import { Stack } from 'expo-router';
+   *
+   * ...
+   * <Stack.Header.Menu>
+   *   <Stack.Header.Icon sf="star.fill" />
+   *   <Stack.Header.Label>As components</Stack.Header.Label>
+   *   <Stack.Header.Badge>3</Stack.Header.Badge>
+   *   <Stack.Header.MenuAction>Action 1</Stack.Header.MenuAction>
+   * </Stack.Header.Menu>
+   * ```
+   *
+   * **Note**: When icon is used, the label will not be shown and will be used for accessibility purposes only.
+   */
+  children?: ReactNode;
+  /**
+   * Style for the label of the header item.
+   */
+  style?: StackHeaderItemSharedProps['style'];
+  /**
+   * Whether to separate the background of this item from other header items.
+   *
+   * @default false
+   */
+  separateBackground?: boolean;
+  accessibilityLabel?: string;
+  accessibilityHint?: string;
+  disabled?: boolean;
+  /**
+   * The tint color to apply to the button item
+   *
+   * @see [Apple documentation](https://developer.apple.com/documentation/uikit/uibarbuttonitem/tintcolor) for more information.
+   */
+  tintColor?: StackHeaderItemSharedProps['tintColor'];
+  icon?: StackHeaderItemSharedProps['icon'];
+  /**
+   * @default 'plain'
+   */
+  variant?: StackHeaderItemSharedProps['variant'];
 }
 
 /**

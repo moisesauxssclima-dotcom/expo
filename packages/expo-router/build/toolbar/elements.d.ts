@@ -1,26 +1,21 @@
 import { type ColorValue, type StyleProp, type ViewStyle } from 'react-native';
 import type { SFSymbol } from 'sf-symbols-typescript';
-import { LinkMenuAction, type LinkMenuActionProps, type LinkMenuProps } from '../link/elements';
-/**
- * For available props, see [`LinkMenuProps`](./router/#linkmenuprops).
- *
- * @platform ios
- */
-export interface ToolbarMenuProps extends LinkMenuProps {
+import { LinkMenuAction, type LinkMenuActionProps } from '../link/elements';
+export interface ToolbarMenuProps {
     /**
-     * Whether the button shares the background with adjacent toolbar items.
+     * Whether to separate the background of this item from other header items.
      *
      * > **Note**: Text buttons cannot share the background.
      *
-     * Only available for root level menus.
+     * This prop reverses the native behavior of `sharesBackground`.
      *
      * @see [Official Apple documentation](https://developer.apple.com/documentation/uikit/uibarbuttonitem/sharesbackground) for more information.
      *
-     * @default true
+     * @default false
      *
      * @platform iOS 26+
      */
-    sharesBackground?: boolean;
+    separateBackground?: boolean;
     /**
      * Whether to hide the shared background when `sharesBackground` is enabled.
      *
@@ -31,11 +26,40 @@ export interface ToolbarMenuProps extends LinkMenuProps {
      * @platform iOS 26+
      */
     hidesSharedBackground?: boolean;
+    hidden?: boolean;
+    /**
+     * The title of the menu item
+     */
+    title?: string;
+    /**
+     * Optional SF Symbol displayed alongside the menu item.
+     */
+    icon?: SFSymbol;
+    /**
+     * If `true`, the menu will be displayed as a palette.
+     * This means that the menu will be displayed as one row
+     *
+     * @see [Apple documentation](https://developer.apple.com/documentation/uikit/uimenu/options-swift.struct/displayaspalette) for more information.
+     */
+    palette?: boolean;
+    /**
+     * If `true`, the menu will be displayed inline.
+     * This means that the menu will not be collapsed
+     *
+     * @see [Apple documentation](https://developer.apple.com/documentation/uikit/uimenu/options-swift.struct/displayinline) for more information.
+     */
+    inline?: boolean;
+    /**
+     * If `true`, the menu item will be displayed as destructive.
+     *
+     * @see [Apple documentation](https://developer.apple.com/documentation/uikit/uimenu/options-swift.struct/destructive) for more information.
+     */
+    destructive?: boolean;
+    children?: React.ReactNode;
+    disabled?: boolean;
 }
 /**
  * Adds a context menu for to a toolbar.
- *
- * For available props, see [`LinkMenuProps`](./router/#linkmenuprops).
  *
  * @example
  * ```tsx
@@ -49,7 +73,7 @@ export interface ToolbarMenuProps extends LinkMenuProps {
  *
  * @platform ios
  */
-export declare const ToolbarMenu: import("react").FC<LinkMenuProps>;
+export declare const ToolbarMenu: React.FC<ToolbarMenuProps>;
 export type ToolbarMenuActionProps = LinkMenuActionProps;
 /**
  * A single action item within a toolbar menu.
@@ -143,6 +167,9 @@ export interface ToolbarButtonProps {
      * @see [Official Apple documentation](https://developer.apple.com/documentation/uikit/uibarbuttonitem/possibletitles) for more information.
      */
     possibleTitles?: string[];
+    accessibilityLabel?: string;
+    accessibilityHint?: string;
+    disabled?: boolean;
 }
 /**
  * A button component for use in the toolbar.

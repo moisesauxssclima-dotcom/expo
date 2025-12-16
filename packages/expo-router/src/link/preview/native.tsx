@@ -26,6 +26,13 @@ export interface NativeLinkPreviewActionProps {
   // because it will close all opened submenus and reset the scroll position.
   // TODO: (@ubax) find a way to fix this.
   keepPresented?: boolean;
+  hidden?: boolean;
+  /**
+   * @note These properties are for UIBarButtonItem compatibility but don't apply to context menus.
+   * They're included for API consistency with toolbar items.
+   */
+  sharesBackground?: boolean;
+  hidesSharedBackground?: boolean;
   onSelected: () => void;
 }
 const LinkPreviewNativeActionView: React.ComponentType<NativeLinkPreviewActionProps> | null =

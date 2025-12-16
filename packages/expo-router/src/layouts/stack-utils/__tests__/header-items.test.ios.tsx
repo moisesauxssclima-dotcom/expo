@@ -45,9 +45,9 @@ it('should convert header items children, correctly to options', () => {
               <StackHeader.Icon sf="star" />
               <StackHeader.Badge>33</StackHeader.Badge>
             </StackHeader.Button>
-            <StackHeader.Item>
+            <StackHeader.View>
               <CustomHeaderElement />
-            </StackHeader.Item>
+            </StackHeader.View>
           </StackHeader.Left>
           <StackHeader.Right>
             <StackHeader.Menu

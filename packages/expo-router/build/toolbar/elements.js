@@ -1,16 +1,14 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.ToolbarHost = exports.ToolbarView = exports.ToolbarSpacer = exports.ToolbarButton = exports.ToolbarMenuAction = exports.ToolbarMenu = void 0;
-const non_secure_1 = require("nanoid/non-secure");
 const react_1 = require("react");
 const react_native_1 = require("react-native");
 const native_1 = require("./native");
 const InternalLinkPreviewContext_1 = require("../link/InternalLinkPreviewContext");
 const elements_1 = require("../link/elements");
+const native_2 = require("../link/preview/native");
 /**
  * Adds a context menu for to a toolbar.
- *
- * For available props, see [`LinkMenuProps`](./router/#linkmenuprops).
  *
  * @example
  * ```tsx
@@ -24,7 +22,12 @@ const elements_1 = require("../link/elements");
  *
  * @platform ios
  */
-exports.ToolbarMenu = elements_1.LinkMenu;
+const ToolbarMenu = ({ separateBackground, hidesSharedBackground, palette, inline, hidden, title, destructive, children, icon, }) => {
+    const identifier = (0, react_1.useId)();
+    const validChildren = react_1.Children.toArray(children).filter((child) => (0, react_1.isValidElement)(child) && (child.type === exports.ToolbarMenuAction || child.type === exports.ToolbarMenu));
+    return (<native_2.NativeLinkPreviewAction sharesBackground={!separateBackground} hidesSharedBackground={hidesSharedBackground} hidden={hidden} icon={icon} destructive={destructive} displayAsPalette={palette} displayInline={inline} title={title ?? ''} onSelected={() => { }} children={validChildren} identifier={identifier}/>);
+};
+exports.ToolbarMenu = ToolbarMenu;
 /**
  * A single action item within a toolbar menu.
  *
@@ -59,9 +62,9 @@ exports.ToolbarMenuAction = elements_1.LinkMenuAction;
  * @platform ios
  */
 const ToolbarButton = (props) => {
-    const id = (0, react_1.useMemo)(() => (0, non_secure_1.nanoid)(), []);
+    const id = (0, react_1.useId)();
     const sf = typeof props.icon === 'string' ? props.icon : undefined;
-    return (<native_1.RouterToolbarItem sharesBackground={!props.separateBackground} tintColor={props.tintColor} barButtonItemStyle={props.variant === 'done' ? 'prominent' : props.variant} selected={props.selected} onSelected={props.onPress} identifier={id} title={String(props.children)} systemImageName={sf}/>);
+    return (<native_1.RouterToolbarItem hidesSharedBackground={props.hidesSharedBackground} sharesBackground={!props.separateBackground} tintColor={props.tintColor} barButtonItemStyle={props.variant === 'done' ? 'prominent' : props.variant} selected={props.selected} onSelected={props.onPress} identifier={id} title={String(props.children)} hidden={props.hidden} systemImageName={sf} disabled={props.disabled} accessibilityLabel={props.accessibilityLabel} accessibilityHint={props.accessibilityHint}/>);
 };
 exports.ToolbarButton = ToolbarButton;
 /**
@@ -84,7 +87,7 @@ exports.ToolbarButton = ToolbarButton;
  * @platform ios
  */
 const ToolbarSpacer = (props) => {
-    const id = (0, react_1.useMemo)(() => (0, non_secure_1.nanoid)(), []);
+    const id = (0, react_1.useId)();
     return (<native_1.RouterToolbarItem identifier={id} sharesBackground={props.sharesBackground} hidesSharedBackground={props.hidesSharedBackground} hidden={props.hidden} type={props.width ? 'fixedSpacer' : 'fluidSpacer'} width={props.width}/>);
 };
 exports.ToolbarSpacer = ToolbarSpacer;
@@ -116,7 +119,7 @@ exports.ToolbarSpacer = ToolbarSpacer;
  * @platform ios
  */
 const ToolbarView = ({ children, style, separateBackground, hidden, hidesSharedBackground, }) => {
-    const id = (0, react_1.useMemo)(() => (0, non_secure_1.nanoid)(), []);
+    const id = (0, react_1.useId)();
     return (<native_1.RouterToolbarItem identifier={id} sharesBackground={!separateBackground} hidden={hidden} hidesSharedBackground={hidesSharedBackground}>
       <react_native_1.View style={[style, { position: 'absolute' }]}>{children}</react_native_1.View>
     </native_1.RouterToolbarItem>);

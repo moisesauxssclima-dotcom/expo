@@ -18,6 +18,9 @@ class RouterToolbarItemView: ExpoView {
   @ReactiveProp var selected: Bool = false
   @ReactiveProp var possibleTitles: Set<String>?
   @ReactiveProp var badgeConfiguration: BadgeConfiguration?
+  @ReactiveProp var accessibilityLabel: String?
+  @ReactiveProp var accessibilityHint: String?
+  @ReactiveProp var disabled: Bool = false
 
   var host: RouterToolbarHostView?
 
@@ -67,6 +70,13 @@ class RouterToolbarItemView: ExpoView {
       item.isHidden = routerHidden
     }
     item.isSelected = selected
+    if let accessibilityLabel = accessibilityLabel {
+      item.accessibilityLabel = accessibilityLabel
+    }
+    if let accessibilityHint = accessibilityHint {
+      item.accessibilityHint = accessibilityHint
+    }
+    item.isEnabled = !disabled
     if #available(iOS 26.0, *) {
       if let badgeConfig = badgeConfiguration {
         var badge = UIBarButtonItem.Badge.indicator()

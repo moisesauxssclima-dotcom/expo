@@ -4,10 +4,15 @@ import type { SFSymbol } from 'sf-symbols-typescript';
 export interface LinkMenuActionProps {
     /**
      * The title of the menu item.
+     * @deprecated Use `children` prop instead.
      */
-    title: string;
+    title?: string;
     /**
-     * Optional SF Symbol displayed alongside the menu item.
+     * The title of the menu item.
+     */
+    children?: string;
+    /**
+     * SF Symbol displayed alongside the menu item.
      */
     icon?: SFSymbol;
     /**
@@ -35,6 +40,14 @@ export interface LinkMenuActionProps {
      * If `true`, the menu item will be displayed as selected.
      */
     isOn?: boolean;
+    /**
+     * Whether the menu element should be hidden.
+     *
+     * @see [Official Apple documentation](https://developer.apple.com/documentation/uikit/uimenuelement/attributes/hidden) for more information.
+     *
+     * @default false
+     */
+    hidden?: boolean;
     onPress: () => void;
 }
 /**
@@ -54,7 +67,7 @@ export interface LinkMenuProps {
     /**
      * Optional SF Symbol displayed alongside the menu item.
      */
-    icon?: string;
+    icon?: SFSymbol;
     /**
      * If `true`, the menu will be displayed as a palette.
      * This means that the menu will be displayed as one row

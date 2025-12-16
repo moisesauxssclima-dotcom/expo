@@ -30,7 +30,7 @@ import { ToolbarMenu, ToolbarMenuAction, ToolbarButton, ToolbarSpacer, ToolbarVi
  * @platform ios
  */
 export declare const Toolbar: ((props: import("./elements").ToolbarProps) => import("react").JSX.Element) & {
-    Menu: import("react").FC<import("..").LinkMenuProps>;
+    Menu: import("react").FC<import("./elements").ToolbarMenuProps>;
     MenuAction: typeof import("..").LinkMenuAction;
     Button: (props: import("./elements").ToolbarButtonProps) => import("react").JSX.Element;
     Spacer: (props: import("./elements").ToolbarSpacerProps) => import("react").JSX.Element;

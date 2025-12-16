@@ -11,6 +11,13 @@ export interface NativeLinkPreviewActionProps {
     displayInline?: boolean;
     isOn?: boolean;
     keepPresented?: boolean;
+    hidden?: boolean;
+    /**
+     * @note These properties are for UIBarButtonItem compatibility but don't apply to context menus.
+     * They're included for API consistency with toolbar items.
+     */
+    sharesBackground?: boolean;
+    hidesSharedBackground?: boolean;
     onSelected: () => void;
 }
 export declare function NativeLinkPreviewAction(props: NativeLinkPreviewActionProps): import("react").JSX.Element | null;

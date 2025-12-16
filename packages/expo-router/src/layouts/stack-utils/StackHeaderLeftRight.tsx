@@ -6,12 +6,12 @@ import {
   convertStackHeaderButtonPropsToRNHeaderItem,
   StackHeaderButton,
 } from './StackHeaderButton';
-import { convertStackHeaderItemPropsToRNHeaderItem, StackHeaderItem } from './StackHeaderItem';
 import { convertStackHeaderMenuPropsToRNHeaderItem, StackHeaderMenu } from './StackHeaderMenu';
 import {
   convertStackHeaderSpacerPropsToRNHeaderItem,
   StackHeaderSpacer,
 } from './StackHeaderSpacer';
+import { convertStackHeaderViewPropsToRNHeaderItem, StackHeaderView } from './StackHeaderView';
 import { isChildOfType } from '../../utils/children';
 import { Screen } from '../../views/Screen';
 
@@ -155,7 +155,7 @@ function convertHeaderRightLeftChildrenToUnstableItems(
       isChildOfType(child, StackHeaderButton) ||
       isChildOfType(child, StackHeaderMenu) ||
       isChildOfType(child, StackHeaderSpacer) ||
-      isChildOfType(child, StackHeaderItem)
+      isChildOfType(child, StackHeaderView)
   );
   if (actions.length !== allChildren.length && process.env.NODE_ENV !== 'production') {
     const otherElements = allChildren
@@ -184,7 +184,7 @@ function convertHeaderRightLeftChildrenToUnstableItems(
       } else if (isChildOfType(action, StackHeaderSpacer)) {
         return convertStackHeaderSpacerPropsToRNHeaderItem(action.props);
       }
-      return convertStackHeaderItemPropsToRNHeaderItem(action.props);
+      return convertStackHeaderViewPropsToRNHeaderItem(action.props);
     });
 }
 

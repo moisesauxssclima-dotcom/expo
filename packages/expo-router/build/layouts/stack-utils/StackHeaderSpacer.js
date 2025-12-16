@@ -32,10 +32,11 @@ exports.convertStackHeaderSpacerPropsToRNHeaderItem = convertStackHeaderSpacerPr
  */
 const StackHeaderSpacer = () => null;
 exports.StackHeaderSpacer = StackHeaderSpacer;
-function convertStackHeaderSpacerPropsToRNHeaderItem(props) {
+// TODO: implement missing props in react-native-screens
+function convertStackHeaderSpacerPropsToRNHeaderItem({ width, }) {
     return {
         type: 'spacing',
-        spacing: props.width,
+        spacing: width,
     };
 }
 //# sourceMappingURL=StackHeaderSpacer.js.map
